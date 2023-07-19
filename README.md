@@ -1,4 +1,4 @@
-# Pico-Alarm-Clock
+# Pico Alarm Clock
 
 **1. Connect the TM1627 4-Digit Display:**
   - Connect the `VCC` and `GND` pin to the `3v3` and `GND` pins on the Raspberry Pi Pico Respectivly
@@ -20,4 +20,17 @@
   - Open Everything in the Thoney Python editor
   - Plug it your Pico and Be sure it has Micro-Python installed on it found on the Offical Raspberry Pi Pico Documentation
   - Save the `main.py` file to the main directory on the pico through Thoney
-  - If there is no folder named `lib` on the Pico, Create a new directory and save the `
+  - If there is no folder named `lib` on the Pico, Create a new directory and save the `rotary.py` and `tm1637` files to that new directory.
+
+**5. Set the time and alarm**
+  - Plug the Pico with everything connected into a permanent power supply (To Avoid have to reset the time and alarm)
+  - Turn the rotary encoder left or right to change the time that is displayed (Note: The time is in the 24-Hour Format)
+  - Once you have set the time, you may disconnect the rotary encoder from the setup. (Unless You want to set an alarm)
+  - To set the alarm connect the rotary encoder back where it originally was makeing sure it fallows the above wiring instructions
+  - Then click the button three times within 2 seconds. This will display `00:00` on the `TM1637` display
+  - Turn the rotary encoder to set the disired time the alarm will go off
+  - Once the alarm is set, click the button three time within 2 seconds again and it will display the current time
+  - When the alarm sounds at your disired time, hit the button to turn the alarm off
+  - The alarm will the sound again at the same time the next day
+
+## **Disclaimer:** When loss of power occurs the Pico will have to be reset
